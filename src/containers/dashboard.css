@@ -1,0 +1,15 @@
+.dashboard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom_dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.small_filter {
+  width: 50vw;
+}

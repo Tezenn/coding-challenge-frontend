@@ -1,32 +1,201 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  border: 0;
+  background-color: #00000007;
+  padding: 13px 20px;
+  margin: 6px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  border-radius: 2px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
 .App {
   text-align: center;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.header h1 {
+  font-size: 3.9rem;
+  letter-spacing: 0.5px;
+  font-family: 'Poor Story', cursive;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header p {
+  font-size: 1.7rem;
+}
+
+.top_dashboard {
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard-wide {
+  margin-top: 23em;
+}
+
+.dashboard-small {
+  margin-top: 0em;
+}
+
+.Gnomelist {
+  display: flex;
+}
+
+.single_view {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.gnome {
+  margin: 0 5px;
+}
+
+.gnome_image img {
+  width: 40vw;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.gnome_info_bottom {
+  border: 0;
+}
+
+input {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 2vh;
+  height: 3vh;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+option {
+  background-color: rgb(248, 248, 248);
+}
+
+select {
+  background-color: rgb(248, 248, 248);
+  margin-top: 2vh;
+  height: 3vh;
+  border: 0;
+  font-family: 'Lato', sans-serif;
+  padding: 5px;
+}
+
+input:focus,
+select:focus {
+  outline: 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10vw;
+}
+
+label {
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin-top: 5vh;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.results {
+  margin-top: 4vh;
+}
+
+.informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.GnomeInfo {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.filtered_gnomes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gnome_friends,
+.gnome_jobs,
+.gnome_image {
+}
+
+.gnome_friends,
+.gnome_jobs {
+  margin: 0 1vw;
+  flex: 1 1 33%;
+}
+
+.informations ul li {
+  list-style-type: none;
+}
+
+.informations ul {
+  padding-left: 0;
+}
+
+.gnome_friends h4,
+.gnome_jobs h4 {
+  text-transform: uppercase;
+}
+
+/* mobile */
+@media screen and (max-width: 480px) {
+  .App {
+    width: 100vw;
+    overflow: scroll;
   }
-  to {
-    transform: rotate(360deg);
+  .informations {
+    flex-direction: column;
+  }
+  .gnome_image {
+    order: -1;
+    width: 100vw;
+  }
+  .gnome_image img {
+    width: 100%;
+  }
+  .gnome_jobs,
+  .gnome_friends,
+  .gnome_image {
+    margin: 1vh 0;
+  }
+  .header h1 {
+    font-size: 2.9rem;
+    margin: 10px;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+  select {
+    height: auto;
+  }
+  label {
+    font-size: 25px;
   }
 }
