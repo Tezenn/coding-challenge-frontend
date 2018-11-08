@@ -11,4 +11,4 @@ First the app check the localstorage to see if there are gnomes loaded already, 
 
 The app is intuitive to use, is possible to scroll through all gnomes or filter them by name, age, professions or common friends. Once selected one is possible to see more detailed information and be redirected to the page of his friends.
 
-The app is responsive for mobile.
+The app is responsive and made for mobile first.
