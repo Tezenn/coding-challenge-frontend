@@ -9,7 +9,7 @@ class Dashboard extends Component {
     allGnome: false
   };
   componentDidMount() {
-    if (this.props.store.gnomes.length === 0) {
+    if (this.props.store.gnomes.gnomes.length === 0) {
       fetch(
         'https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json'
       )
@@ -30,7 +30,10 @@ class Dashboard extends Component {
         <div className="show_all_gnomes">
           {this.state.allGnome && (
             <div className="top_dashboard">
-              <Gnomelist gnomes={this.props.store.gnomes} {...this.props} />
+              <Gnomelist
+                gnomes={this.props.store.gnomes.gnomes}
+                {...this.props}
+              />
             </div>
           )}
           <button

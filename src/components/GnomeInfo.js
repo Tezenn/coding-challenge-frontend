@@ -87,7 +87,7 @@ class GnomeInfo extends Component {
 }
 
 const mapStateToProps = store => ({
-  gnomes: store.gnomes
+  gnomes: store.gnomes.gnomes
 });
 
 export default connect(mapStateToProps)(GnomeInfo);

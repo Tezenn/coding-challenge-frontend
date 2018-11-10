@@ -6,7 +6,7 @@ class Gnomelist extends Component {
     return (
       <div className="single_view">
         {this.props.gnomes &&
-          this.props.gnomes.slice(0, 10).map(el => {
+          this.props.gnomes.map(el => {
             return <SingleGnome gnome={el} key={el.id} {...this.props} />;
           })}
       </div>
