@@ -39,7 +39,9 @@ class Dashboard extends Component {
           <button
             onClick={() => this.setState({ allGnome: !this.state.allGnome })}
           >
-            Scroll through all the gnomes{' '}
+            {this.state.allGnome
+              ? 'Close Gallery'
+              : 'Scroll Through All The Gnomes'}
           </button>
         </div>
         <div className="filters">
